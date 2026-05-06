@@ -6,26 +6,28 @@ var config = {
     /* Setup Scale Mode for automatic game resolution */
     scale: {
         //parent: divId,
-        mode: Phaser.Scale.RESIZE,
+        mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
+        transparent: true,
     /* Main Size 2k*/
-            minWidth: 2560,
-            minHeight: 1440,
-
+            width: 2560,
+            height: 1440,
+            zoom: 1,
     /* Minimum Size 420p*/
         min: {
-            minWidth: 640,
-            minHeight: 480,
+            width: 640,
+            height: 480,
         },
 
     /* Maximum Size 4k*/
         max: {
-            maxWidth: 3840,
-            maxHeight: 2160
+            width: 3840,
+            height: 2160
         },
         zoom: 1, // size of the canvas = game size * zoom
     },
-    autoRound: false
+    autoRound: false,
+    scene: [GameScene]
 };
 
 var game = new Phaser.Game(config);
