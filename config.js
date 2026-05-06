@@ -27,7 +27,7 @@ var config = {
         zoom: 1, // size of the canvas = game size * zoom
     },
     autoRound: false,
-    scene: [MenuScene, GameScene, DebriefingScene]
+    scene: [ GameScene, DebriefingScene]
 };
 
 var game = new Phaser.Game(config);

@@ -2,7 +2,7 @@ class DebriefingScene extends Phaser.Scene {
 
     constructor ()
     {
-        super('GameScene');
+        super('DebriefingScene');
     }
      preload ()
     {
