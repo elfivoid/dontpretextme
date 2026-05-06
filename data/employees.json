@@ -1,0 +1,20 @@
+{
+    "id": "ST-2026-035",
+    "name": "Mirko Jarrer",
+    "email": "m.jarrer@signumtec.de",
+    "department": "Finanzen",
+    "position": "Buchhalter",
+    "phone": "+49 721 5246-150",
+    "office": "Karlsruhe",
+    "supervisor": "Markus Werner",
+    "hireDate": "07.02.2023",
+    "accessRights": ["Finanzsystem", "SAP", "Reisekosten"],
+    "securityCode": "Mond745521x",
+    "status": "Aktiv",
+    "calendar": {
+        "today": "Urlaub - Tegernsee (bis Fr.)",
+        "lastWeek": "vor Ort (regulär)",
+        "nextWeek": "Mo: Rückkehr, Di: Quartalsmeeting"
+    },
+    "portrait": "MirkoJarrer.png"
+}
