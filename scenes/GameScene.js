@@ -6,13 +6,23 @@ class GameScene extends Phaser.Scene {
     }
      preload ()
     {
-        this.load.image('zones', 'assets/images/zones.png');
+        this.load.image('zones', 'assets/images/zones1080.png');
     }
 
      create ()
     {           
         const {width, height} = config.scale;
         this.add.image(width/2, height/2, 'zones');
+
+
+    // Keyboard input for fullscreen with f11
+        this.input.keyboard.on('keydown-f11', () => {
+            if (this.scale.isFullscreen) {
+                this.scale.stopFullscreen();
+            } else {
+                this.scale.startFullscreen();
+            }
+        });
     }
 
      update ()

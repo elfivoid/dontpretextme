@@ -12,7 +12,7 @@ var config = {
     /* Main Size 2k*/
             width: 2560,
             height: 1440,
-            zoom: 1,
+            //zoom: 1,
     /* Minimum Size 420p*/
         min: {
             width: 640,
