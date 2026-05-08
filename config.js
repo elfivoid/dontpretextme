@@ -3,6 +3,9 @@
 var config = {
     type: Phaser.AUTO,
     
+    input: {
+        keyboard: true,
+    },
     /* Setup Scale Mode for automatic game resolution */
     scale: {
         //parent: divId,
