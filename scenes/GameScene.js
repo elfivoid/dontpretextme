@@ -11,18 +11,11 @@ class GameScene extends Phaser.Scene {
 
      create ()
     {           
-        const {width, height} = config.scale;
+        const {width, height} = this.scale;
         this.add.image(width/2, height/2, 'zones').setDisplaySize(width, height);
 
 
-    // Keyboard input for fullscreen with f11
-        this.input.keyboard.on('keydown-f11', () => {
-            if (this.scale.isFullscreen) {
-                this.scale.stopFullscreen();
-            } else {
-                this.scale.startFullscreen();
-            }
-        });
+
     }
 
      update ()

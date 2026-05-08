@@ -11,7 +11,7 @@ class DebriefingScene extends Phaser.Scene {
 
      create ()
     {           
-        const {width, height} = config.scale;
+        const {width, height} = this.scale;
         this.add.image(width/2, height/2, 'zones');
     }
 
