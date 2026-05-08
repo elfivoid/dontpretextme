@@ -12,7 +12,7 @@ class TitleScene extends Phaser.Scene {
      create ()
     {           
         const {width, height} = this.scale;
-        this.add.image(width/2, height/2, 'zones').setDisplaySize(width, height);
+        this.add.image(width/2, height/2, 'titlescene').setDisplaySize(width, height);
 
 
     // Keyboard input for fullscreen with f11
