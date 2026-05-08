@@ -16,7 +16,7 @@ class TitleScene extends Phaser.Scene {
 
 
     // Keyboard input for fullscreen with f11
-        this.input.keyboard.on('keydown-f11', () => {
+        this.input.keyboard.on('keydown-F11', () => {
         //global     
             event.preventDefault();
             if (this.scale.isFullscreen) {
@@ -25,8 +25,10 @@ class TitleScene extends Phaser.Scene {
                 this.scale.startFullscreen();
             }
         });
-        this.input.keyboard.once('keydown', () => {
+        this.input.keyboard.on('keydown', (event) => {
+            if (event.code === 'F11') return; //exclude F11
             console.log("Taste gedrückt, wechsle Szene...");
+            this.input.keyboard.off('keydown');
             this.scene.start('MenuScene');
         });
     }
