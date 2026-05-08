@@ -6,7 +6,7 @@ class DebriefingScene extends Phaser.Scene {
     }
      preload ()
     {
-        this.load.image('zones', 'assets/images/zones.png');
+        this.load.image('debriefingscene', 'assets/images/zones.png');
     }
 
      create ()
