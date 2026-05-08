@@ -12,9 +12,9 @@ var config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         transparent: true,
-    /* Main Size 2k*/
-            width: 2560,
-            height: 1440,
+    /* Main Size Full HD*/
+            width: 1920,
+            height: 1080,
             //zoom: 1,
     /* Minimum Size 420p*/
         min: {
@@ -22,10 +22,10 @@ var config = {
             height: 480,
         },
 
-    /* Maximum Size 4k*/
+    /* Maximum Size 2k*/
         max: {
-            width: 3840,
-            height: 2160
+            width: 2560,
+            height: 1440
         },
         zoom: 1, // size of the canvas = game size * zoom
     },
