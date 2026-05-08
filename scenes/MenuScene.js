@@ -10,7 +10,7 @@ class MenuScene extends Phaser.Scene {
     }
 
      create ()
-    {           
+    {          
         const {width, height} = this.scale;
         this.add.image(width/2, height/2, 'menuscene').setDisplaySize(width, height);
 
@@ -19,7 +19,14 @@ class MenuScene extends Phaser.Scene {
         startbtn.setInteractive();
         startbtn.on('pointerdown', () => {
         this.scene.start('GameScene');
-    });
+        });
+        let btntext = this.add.text (width/2, height/2, 'NEUES SPIEL', {
+        fontSize: '16px',
+        fontFamily: 'Calibri',
+        color: '#ffffff',
+        fontStyle: 'bold'
+        });
+
     }
 
      update ()
