@@ -1,33 +1,33 @@
 
-/* Phaser Game Configuration */
+/* Phaser Spielkonfiguration */
 var config = {
     type: Phaser.AUTO,
     
     input: {
         keyboard: true,
     },
-    /* Setup Scale Mode for automatic game resolution */
+    /* Einstellen von Scale Mode für eine automatische Spielauflösung*/
     scale: {
         //parent: divId,
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         transparent: true,
-    /* Main Size Full HD*/
+    /* Full HD Hauptauflösung*/
             width: 1920,
             height: 1080,
             //zoom: 1,
-    /* Minimum Size 420p*/
+    /* Kleinste Größe 420p*/
         min: {
             width: 640,
             height: 480,
         },
 
-    /* Maximum Size 2k*/
+    /* Größte Größe 2k*/
         max: {
             width: 2560,
             height: 1440
         },
-        zoom: 1, // size of the canvas = game size * zoom
+    // zoom: 1, // Größe des Canvas = Spielgröße * Zoom
     },
     autoRound: false,
     scene: [ TitleScene, MenuScene, GameScene, DebriefingScene]

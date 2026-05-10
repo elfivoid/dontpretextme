@@ -13,16 +13,10 @@ class TitleScene extends Phaser.Scene {
     {           
         const {width, height} = this.scale;
         this.add.image(width/2, height/2, 'titlescene').setDisplaySize(width, height);
-        //Camera FadeOut
-        /* this.add.image(width/2, height/2, 'titlescene');
-        this.cameras.main.once('camerafadeoutcomplete', function (camera) {
-        this.add.image(width/2, height/2, 'titlescene');
-        camera.fadeOut(2000, 255);
-        }, this); */
 
-    // Keyboard input for fullscreen with f11
+    // F11 um das Spiel auf Vollbildschirm zu togglen
         this.input.keyboard.on('keydown-F11', () => {
-        //global FullscreenToggle accross all Scenes   
+        //Funktion für den globalen Vollbildschirm toggle über mehrere Szenen hinweg
             event.preventDefault();
             if (this.scale.isFullscreen) {
                 this.scale.stopFullscreen();
@@ -31,9 +25,9 @@ class TitleScene extends Phaser.Scene {
             }
         });
         this.input.keyboard.on('keydown', (event) => {
-        if (event.key === 'F11') {return;}//exclude F11
-            this.input.keyboard.off('keydown'); //disable button smashing
-            this.cameras.main.fadeOut(500, 0 , 0, 0); //fade out to black in 500ms
+        if (event.key === 'F11') {return;}//F11 ausschließen
+            this.input.keyboard.off('keydown'); // verhindert dass weitere Tasten gedrückt werden können
+            this.cameras.main.fadeOut(500, 0 , 0, 0); //Fade Out nach Schwarz in 500ms
             this.cameras.main.once('camerafadeoutcomplete', () => {
                 this.scene.start('MenuScene');
             });

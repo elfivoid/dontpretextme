@@ -9,9 +9,9 @@ class GameScene extends Phaser.Scene {
         this.scoreSatisfaction = 50;
     }
      preload ()
-    {   //preload images and assets
+    {   //Bilder und Assets laden
         this.load.image('zones', 'assets/images/zones.png');
-        //preload ticket data
+        //Ticket Daten laden
         this.load.json('ticketData', 'data/tickets.json'); 
         this.load.json('employees', 'data/employees.json');
         this.load.json('levels', 'levels.json');
@@ -21,21 +21,21 @@ class GameScene extends Phaser.Scene {
     {        
 
 
-//set background to screen
+// Hintergrund auf die Größe des Bildschirms anpassen
         const {width, height} = this.scale;
         this.add.image(width/2, height/2, 'zones').setDisplaySize(width, height);
-//Placeholders
+//Platzhalter
         
-        // office desk
+        // Schreibtisch
         let officedesk = this.add.rectangle(width / 2, height, width, height * 0.4, 0x808080);
         
-        //screen
+        //Bildschirm
         this.monitor = this.add.rectangle(width / 2, height / 2 - 50, 800, 500, 0xffffff);
         this.monitor.setStrokeStyle(10, 0x333333);
 
         
         
-        // ticket shuffle 
+        // Tickets erstellen
    for (let i = 0; i < 4; i++)
         {
             const ticket = this.add.rectangle(width / 4, height / 4 - 50, 800, 500, 0xfff234ff);
@@ -46,7 +46,7 @@ class GameScene extends Phaser.Scene {
 
         this.input.on('dragstart', function (pointer, gameObject) {
 
-            //  This will bring the selected gameObject to the top of the list
+            // das gewählte GameObj wird nach oben geschoben
             this.children.bringToTop(gameObject);
 
         }, this);
@@ -57,13 +57,13 @@ class GameScene extends Phaser.Scene {
             gameObject.y = dragY;
         });
 
-        // creating a hidden zone for placing the tickets for compare
+        // erstellt eine versteckte Zone für die Tickets
         this.add.zone(width / 4, height / 4 - 50, 800, 500, 0xfff234ff);
 
-        //load tickets from json
+        //lädt die Tickets aus der JSON Datei
         this.tickets = this.cache.json.get('ticketData');
         this.ticketIndex = 0;
-        //surface to click for spawning tickets with json data
+        //Overfläche die bei Mausklick Rechtecke spawnt
         let ticketSpawner = this.add.rectangle(960, 900, 200, 60,0x4488ff);
         ticketSpawner.setInteractive();
         ticketSpawner.on('pointerdown', () =>{
