@@ -25,7 +25,6 @@ class GameScene extends Phaser.Scene {
         const {width, height} = this.scale;
         this.add.image(width/2, height/2, 'zones').setDisplaySize(width, height);
 //Platzhalter
-        
         // Schreibtisch
         let officedesk = this.add.rectangle(width / 2, height, width, height * 0.4, 0x808080);
         

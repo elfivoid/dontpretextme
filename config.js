@@ -2,7 +2,7 @@
 /* Phaser Spielkonfiguration */
 var config = {
     type: Phaser.AUTO,
-    
+    dom: {createContainer: true},
     input: {
         keyboard: true,
     },
